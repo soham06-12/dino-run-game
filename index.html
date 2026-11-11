@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#071b1a" />
+  <meta name="description" content="Dino Runner — Endless Adventure. Run wild in a prehistoric world." />
+  <title>DINO RUN — Endless Adventure</title>
+</head>
+<body>
+  <div id="app">
+    <canvas id="game"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar"><div class="brand"><span class="brand-mark">✦</span><span>DINO<span class="brand-accent">RUN</span></span></div><div class="top-actions"><button id="soundBtn" class="icon-btn" aria-label="Toggle sound">♫</button><button id="pauseBtn" class="icon-btn" aria-label="Pause game">Ⅱ</button></div></header>
+    <section id="menu" class="screen">
+      <div class="eyebrow"><span class="pulse"></span> PREHISTORIC SURVIVAL</div>
+      <h1>RUN<br><em>WILD.</em></h1>
+      <p class="intro">The world is ancient. The chase is endless.</p>
+      <div class="dino-picker"><button id="prevDino" class="picker-arrow">‹</button><div class="dino-info"><span class="mini-label">CHOOSE YOUR DINOSAUR</span><strong id="dinoName">TYRANNOSAURUS</strong><span id="dinoType">THE KING · BALANCED</span></div><button id="nextDino" class="picker-arrow">›</button></div>
+      <button id="playBtn" class="primary-btn">START RUN <span>↗</span></button>
+      <div class="best-line">BEST DISTANCE <b id="bestMenu">0 m</b></div>
+      <div class="menu-hint">← → MOVE <i>•</i> SPACE / ↑ JUMP <i>•</i> ↓ SLIDE</div>
+    </section>
+    <section id="hud" class="hud hidden"><div class="hud-stat"><span>DISTANCE</span><b id="distance">0 <small>m</small></b></div><div class="hud-center"><span class="live-dot"></span> SURVIVE</div><div class="hud-stat right"><span>SHARDS</span><b id="coins">0</b></div></section>
+    <section id="overlay" class="screen hidden"><div class="eyebrow" id="overlayEyebrow">RUN COMPLETE</div><h2 id="overlayTitle">EXTINCT.</h2><p id="overlayText">The prehistoric world got you.</p><div class="result-grid"><div><span>DISTANCE</span><b id="finalDistance">0 m</b></div><div><span>SHARDS</span><b id="finalCoins">0</b></div><div><span>BEST</span><b id="finalBest">0 m</b></div></div><button id="retryBtn" class="primary-btn">RUN AGAIN <span>↗</span></button><button id="menuBtn" class="text-btn">BACK TO MENU</button></section>
+    <div id="toast" class="toast hidden"></div>
+    <div class="mobile-controls"><button id="leftBtn">←</button><button id="jumpBtn">↑</button><button id="slideBtn">↓</button><button id="rightBtn">→</button></div>
+    <footer class="footer"><span>JURASSIC ZONE <b>01</b></span><span>BUILT FOR THE BRAVE</span></footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
